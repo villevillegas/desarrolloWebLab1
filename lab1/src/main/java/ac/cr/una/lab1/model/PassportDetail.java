@@ -20,30 +20,30 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="passport_detail")
-public class Passport_detail {
+public class PassportDetail {
     
     @Id
     @Column(name="id")
     @GeneratedValue(strategy = IDENTITY)
-    private Long id;
+    private long id;
     
     @Column(name="passportno")
     private String passportno;
 
-    public Passport_detail(Long id, String passportno) {
+    public PassportDetail(Long id, String passportno) {
         this.id = id;
         this.passportno = passportno;
     }
 
-    public Passport_detail() {
+    public PassportDetail() {
     }
     
     
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -79,7 +79,7 @@ public class Passport_detail {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Passport_detail other = (Passport_detail) obj;
+        final PassportDetail other = (PassportDetail) obj;
         if (!Objects.equals(this.passportno, other.passportno)) {
             return false;
         }

@@ -41,10 +41,19 @@ Contributor(s):
 -->
 <hibernate-configuration>
   <session-factory>
+    <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+    <property name="hibernate.id.new_generator_mappings">true</property>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/lab1OneToOne?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/lab1OneToOne</property>
     <property name="hibernate.connection.username">lab1OneToOne</property>
     <property name="hibernate.connection.password">lab1OneToOne</property>
+    <property name="show_sql">true</property>
+    
+    <mapping class="ac.cr.una.lab1.model.PassportDetail"></mapping>
+    <mapping class="ac.cr.una.lab1.model.Person"></mapping>
+   
   </session-factory>
+  
+  
 </hibernate-configuration>
