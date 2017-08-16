@@ -8,6 +8,7 @@ package ac.cr.una.lab1.model;
 import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
@@ -30,7 +31,7 @@ public class Person {
     private String name;
     
     @JoinColumn(name="passport_detail_id")
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     private PassportDetail passport_detail;
 //    `id` bigint(20) NOT NULL AUTO_INCREMENT,
 //`name` varchar(255) DEFAULT NULL,
